@@ -34,6 +34,6 @@ extension MainPresenter: MainViewOutput {
     }
     
     func viewModel(for index: Int) -> MainCollectionCellViewModel? {
-        nil
+        .init(text: "Some random text lmao")
     }
 }

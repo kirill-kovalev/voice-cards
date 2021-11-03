@@ -46,6 +46,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        let inset = collectionView.frame.width / 10
+        collectionView.contentInset = .init(top: 0, left: inset, bottom: 0, right: inset)
     }
 }
 

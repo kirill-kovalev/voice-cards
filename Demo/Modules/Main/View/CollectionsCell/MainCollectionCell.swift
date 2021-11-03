@@ -9,12 +9,17 @@
 import UIKit
 
 struct MainCollectionCellViewModel {
-    
+    let text: String
 }
 
 class MainCollectionCell: BaseCollectionViewCell {
     
     @IBOutlet private weak var gradientView: GradientView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var coverTitleLabel: UILabel!
+
+    private let titleMaskView = UIView()
+    
     private(set) var viewModel: MainCollectionCellViewModel?
 
     override func initSetup() {
@@ -24,12 +29,22 @@ class MainCollectionCell: BaseCollectionViewCell {
         gradientView.firstColor = color.firstColor
         gradientView.secondColor = color.secondColor
         
+        titleLabel.font = Fonts.heading
+        titleLabel.textColor = Theme.black.withAlphaComponent(0.7)
+        titleLabel.textAlignment = .center
+        
+        coverTitleLabel.textAlignment = titleLabel.textAlignment
+        coverTitleLabel.font = titleLabel.font
+        coverTitleLabel.textColor = Theme.black
+//        coverTitleLabel.mask = titleMaskView
+        
         contentView.layer.cornerRadius = 25
     }
     
     func setup(with viewModel: MainCollectionCellViewModel?) {
         self.viewModel = viewModel
-
+        titleLabel.text = viewModel?.text
+        coverTitleLabel.text = viewModel?.text
     }
 }
 
