@@ -10,6 +10,10 @@ import Foundation
 
 protocol MainViewOutput {
     func viewIsReady()
+    
+    func numberOfCells() -> Int
+    
+    func viewModel(for index: Int) -> MainCollectionCellViewModel?
 }
 
 class MainPresenter {
@@ -23,5 +27,13 @@ class MainPresenter {
 extension MainPresenter: MainViewOutput {
     func viewIsReady() {
         
+    }
+    
+    func numberOfCells() -> Int {
+        10
+    }
+    
+    func viewModel(for index: Int) -> MainCollectionCellViewModel? {
+        nil
     }
 }

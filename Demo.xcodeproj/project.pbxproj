@@ -26,6 +26,9 @@
 		60757CEE27332223006066D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60757CF027332223006066D5 /* Localizable.strings */; };
 		60757CF6273323AD006066D5 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60757CE427331E46006066D5 /* SFProDisplay-Regular.ttf */; };
 		60757CF7273323AD006066D5 /* TTCommons-DemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60757CE327331E46006066D5 /* TTCommons-DemiBold.ttf */; };
+		60757CFC27332459006066D5 /* MainCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60757CFA27332459006066D5 /* MainCollectionCell.xib */; };
+		60757CFD27332459006066D5 /* MainCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CFB27332459006066D5 /* MainCollectionCell.swift */; };
+		60757D0227332613006066D5 /* GradintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757D0127332613006066D5 /* GradintView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +65,9 @@
 		60757CE427331E46006066D5 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		60757CE927332071006066D5 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
 		60757CEF27332223006066D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		60757CFA27332459006066D5 /* MainCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionCell.xib; sourceTree = "<group>"; };
+		60757CFB27332459006066D5 /* MainCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionCell.swift; sourceTree = "<group>"; };
+		60757D0127332613006066D5 /* GradintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradintView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,7 @@
 		60757CA327331525006066D5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				60757CF927332446006066D5 /* CollectionsCell */,
 				60757C8B27331457006066D5 /* Main.storyboard */,
 				60757C8C27331457006066D5 /* MainViewController.swift */,
 			);
@@ -223,6 +230,7 @@
 		60757CD227331966006066D5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				60757D0027332606006066D5 /* Views */,
 				60757CD32733196A006066D5 /* Theme */,
 			);
 			path = UI;
@@ -244,6 +252,23 @@
 				60757CE327331E46006066D5 /* TTCommons-DemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		60757CF927332446006066D5 /* CollectionsCell */ = {
+			isa = PBXGroup;
+			children = (
+				60757CFA27332459006066D5 /* MainCollectionCell.xib */,
+				60757CFB27332459006066D5 /* MainCollectionCell.swift */,
+			);
+			path = CollectionsCell;
+			sourceTree = "<group>";
+		};
+		60757D0027332606006066D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				60757D0127332613006066D5 /* GradintView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +334,7 @@
 				60757C9127331457006066D5 /* Main.storyboard in Resources */,
 				60757CEE27332223006066D5 /* Localizable.strings in Resources */,
 				60757C72273312FC006066D5 /* LaunchScreen.storyboard in Resources */,
+				60757CFC27332459006066D5 /* MainCollectionCell.xib in Resources */,
 				60757CF7273323AD006066D5 /* TTCommons-DemiBold.ttf in Resources */,
 				60757CF6273323AD006066D5 /* SFProDisplay-Regular.ttf in Resources */,
 				60757C6F273312FC006066D5 /* Assets.xcassets in Resources */,
@@ -367,7 +393,9 @@
 				60757C9327331457006066D5 /* MainModule.swift in Sources */,
 				60757CE027331DF8006066D5 /* Fonts.swift in Sources */,
 				60757CEA27332071006066D5 /* String + Extensions.swift in Sources */,
+				60757CFD27332459006066D5 /* MainCollectionCell.swift in Sources */,
 				60757CD927331BF4006066D5 /* BaseCollectionViewCell.swift in Sources */,
+				60757D0227332613006066D5 /* GradintView.swift in Sources */,
 				60757CD527331978006066D5 /* Theme.swift in Sources */,
 				60757CA1273314FB006066D5 /* Array + Extensions.swift in Sources */,
 				60757CC32733168B006066D5 /* UIVIewController + Extensions.swift in Sources */,

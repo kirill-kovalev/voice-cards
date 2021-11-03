@@ -31,6 +31,10 @@ class BaseCollectionViewCell: UICollectionViewCell {
     class var reuseIdentifier: String {
         String(describing: Self.self)
     }
+    
+    class var nibName: String {
+        String(describing: Self.self)
+    }
 }
 
 extension UICollectionView {

@@ -23,6 +23,17 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupTheme()
         headingLabel.text = "main.heading.text".localized
+        
+        let cellNib = UINib(nibName: MainCollectionCell.nibName, bundle: .current)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: MainCollectionCell.reuseIdentifier)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        collectionView.collectionViewLayout = layout
     
         output.viewIsReady()
     }
@@ -31,6 +42,31 @@ class MainViewController: UIViewController {
         headingLabel.font = Fonts.heading
         headingLabel.textColor = Theme.black
         view.backgroundColor = Theme.white
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+}
+
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        collectionView.frame.inset(by: collectionView.adjustedContentInset).size
+    }
+}
+
+extension MainViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        output.numberOfCells()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt index: IndexPath) -> UICollectionViewCell {
+        let cell: MainCollectionCell? = collectionView.dequeueReusableCell(for: index)
+        let viewModel = output.viewModel(for: index.item)
+        cell?.setup(with: viewModel)
+        return cell ?? .init()
     }
 }
 
