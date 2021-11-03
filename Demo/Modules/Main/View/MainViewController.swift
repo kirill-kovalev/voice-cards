@@ -18,6 +18,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet private weak var headingLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
+    
+    private var lastPageIndex: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +65,21 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.page != lastPageIndex {
+            output.didChangePage()
+        }
+        lastPageIndex = scrollView.page
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        guard scrollView.isDragging else { return }
+        output.didEndSwitchingToPage(at: collectionView.page)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        output.didTapCell(at: indexPath.row)
+    }
 }
 
 extension MainViewController: UICollectionViewDataSource {

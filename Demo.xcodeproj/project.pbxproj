@@ -30,6 +30,7 @@
 		60757CFD27332459006066D5 /* MainCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CFB27332459006066D5 /* MainCollectionCell.swift */; };
 		60757D0227332613006066D5 /* GradintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757D0127332613006066D5 /* GradintView.swift */; };
 		60757D0527333156006066D5 /* MainCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757D0427333156006066D5 /* MainCollectionViewLayout.swift */; };
+		60757D0B2733428B006066D5 /* UIScrollView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757D0A2733428B006066D5 /* UIScrollView + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +71,7 @@
 		60757CFB27332459006066D5 /* MainCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionCell.swift; sourceTree = "<group>"; };
 		60757D0127332613006066D5 /* GradintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradintView.swift; sourceTree = "<group>"; };
 		60757D0427333156006066D5 /* MainCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewLayout.swift; sourceTree = "<group>"; };
+		60757D0A2733428B006066D5 /* UIScrollView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				60757CA0273314FB006066D5 /* Array + Extensions.swift */,
 				60757CC22733168B006066D5 /* UIVIewController + Extensions.swift */,
 				60757CE927332071006066D5 /* String + Extensions.swift */,
+				60757D0A2733428B006066D5 /* UIScrollView + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				60757C992733149D006066D5 /* Constants.swift in Sources */,
 				60757C9427331457006066D5 /* MainPresenter.swift in Sources */,
 				60757C9227331457006066D5 /* MainViewController.swift in Sources */,
+				60757D0B2733428B006066D5 /* UIScrollView + Extensions.swift in Sources */,
 				60757C9327331457006066D5 /* MainModule.swift in Sources */,
 				60757CE027331DF8006066D5 /* Fonts.swift in Sources */,
 				60757CEA27332071006066D5 /* String + Extensions.swift in Sources */,
