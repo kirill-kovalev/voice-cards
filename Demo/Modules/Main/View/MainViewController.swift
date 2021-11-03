@@ -15,11 +15,22 @@ protocol MainViewInput: AnyObject {
 class MainViewController: UIViewController {
     
     var output: MainViewOutput!
+    
+    @IBOutlet private weak var headingLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupTheme()
+        headingLabel.text = "main.heading.text".localized
+    
         output.viewIsReady()
+    }
+    
+    func setupTheme() {
+        headingLabel.font = Fonts.heading
+        headingLabel.textColor = Theme.black
+        view.backgroundColor = Theme.white
     }
 }
 

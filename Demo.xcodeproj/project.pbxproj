@@ -21,6 +21,11 @@
 		60757CD027331813006066D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757C65273312FA006066D5 /* AppDelegate.swift */; };
 		60757CD527331978006066D5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CD427331978006066D5 /* Theme.swift */; };
 		60757CD927331BF4006066D5 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CD827331BF4006066D5 /* BaseCollectionViewCell.swift */; };
+		60757CE027331DF8006066D5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CDF27331DF8006066D5 /* Fonts.swift */; };
+		60757CEA27332071006066D5 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CE927332071006066D5 /* String + Extensions.swift */; };
+		60757CEE27332223006066D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60757CF027332223006066D5 /* Localizable.strings */; };
+		60757CF6273323AD006066D5 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60757CE427331E46006066D5 /* SFProDisplay-Regular.ttf */; };
+		60757CF7273323AD006066D5 /* TTCommons-DemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60757CE327331E46006066D5 /* TTCommons-DemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +57,11 @@
 		60757CC22733168B006066D5 /* UIVIewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController + Extensions.swift"; sourceTree = "<group>"; };
 		60757CD427331978006066D5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		60757CD827331BF4006066D5 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		60757CDF27331DF8006066D5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		60757CE327331E46006066D5 /* TTCommons-DemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-DemiBold.ttf"; sourceTree = "<group>"; };
+		60757CE427331E46006066D5 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		60757CE927332071006066D5 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
+		60757CEF27332223006066D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +116,9 @@
 		60757C7C27331330006066D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60757CE227331E2C006066D5 /* Fonts */,
 				60757C6E273312FC006066D5 /* Assets.xcassets */,
+				60757CF027332223006066D5 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -153,6 +165,7 @@
 				60757C9D273314D2006066D5 /* Bundle + Extensions.swift */,
 				60757CA0273314FB006066D5 /* Array + Extensions.swift */,
 				60757CC22733168B006066D5 /* UIVIewController + Extensions.swift */,
+				60757CE927332071006066D5 /* String + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -219,8 +232,18 @@
 			isa = PBXGroup;
 			children = (
 				60757CD427331978006066D5 /* Theme.swift */,
+				60757CDF27331DF8006066D5 /* Fonts.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		60757CE227331E2C006066D5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				60757CE427331E46006066D5 /* SFProDisplay-Regular.ttf */,
+				60757CE327331E46006066D5 /* TTCommons-DemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +307,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				60757C9127331457006066D5 /* Main.storyboard in Resources */,
+				60757CEE27332223006066D5 /* Localizable.strings in Resources */,
 				60757C72273312FC006066D5 /* LaunchScreen.storyboard in Resources */,
+				60757CF7273323AD006066D5 /* TTCommons-DemiBold.ttf in Resources */,
+				60757CF6273323AD006066D5 /* SFProDisplay-Regular.ttf in Resources */,
 				60757C6F273312FC006066D5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +365,8 @@
 				60757C9427331457006066D5 /* MainPresenter.swift in Sources */,
 				60757C9227331457006066D5 /* MainViewController.swift in Sources */,
 				60757C9327331457006066D5 /* MainModule.swift in Sources */,
+				60757CE027331DF8006066D5 /* Fonts.swift in Sources */,
+				60757CEA27332071006066D5 /* String + Extensions.swift in Sources */,
 				60757CD927331BF4006066D5 /* BaseCollectionViewCell.swift in Sources */,
 				60757CD527331978006066D5 /* Theme.swift in Sources */,
 				60757CA1273314FB006066D5 /* Array + Extensions.swift in Sources */,
@@ -358,6 +386,14 @@
 				60757C71273312FC006066D5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		60757CF027332223006066D5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60757CEF27332223006066D5 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

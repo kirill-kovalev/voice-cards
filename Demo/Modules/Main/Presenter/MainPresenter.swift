@@ -13,9 +13,7 @@ protocol MainViewOutput {
 }
 
 class MainPresenter {
-    
     weak var view: MainViewInput?
-    
     
     init() {
         
