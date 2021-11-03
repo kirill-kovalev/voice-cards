@@ -29,6 +29,7 @@
 		60757CFC27332459006066D5 /* MainCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60757CFA27332459006066D5 /* MainCollectionCell.xib */; };
 		60757CFD27332459006066D5 /* MainCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CFB27332459006066D5 /* MainCollectionCell.swift */; };
 		60757D0227332613006066D5 /* GradintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757D0127332613006066D5 /* GradintView.swift */; };
+		60757D0527333156006066D5 /* MainCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757D0427333156006066D5 /* MainCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +69,7 @@
 		60757CFA27332459006066D5 /* MainCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionCell.xib; sourceTree = "<group>"; };
 		60757CFB27332459006066D5 /* MainCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionCell.swift; sourceTree = "<group>"; };
 		60757D0127332613006066D5 /* GradintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradintView.swift; sourceTree = "<group>"; };
+		60757D0427333156006066D5 /* MainCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				60757CF927332446006066D5 /* CollectionsCell */,
 				60757C8B27331457006066D5 /* Main.storyboard */,
 				60757C8C27331457006066D5 /* MainViewController.swift */,
+				60757D0427333156006066D5 /* MainCollectionViewLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				60757CD927331BF4006066D5 /* BaseCollectionViewCell.swift in Sources */,
 				60757D0227332613006066D5 /* GradintView.swift in Sources */,
 				60757CD527331978006066D5 /* Theme.swift in Sources */,
+				60757D0527333156006066D5 /* MainCollectionViewLayout.swift in Sources */,
 				60757CA1273314FB006066D5 /* Array + Extensions.swift in Sources */,
 				60757CC32733168B006066D5 /* UIVIewController + Extensions.swift in Sources */,
 				60757C9E273314D2006066D5 /* Bundle + Extensions.swift in Sources */,

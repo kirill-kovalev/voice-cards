@@ -27,13 +27,13 @@ class GradientView: BaseView {
 
         }
     }
-    @IBInspectable
+
     var firstPoint: CGPoint = CGPoint(x: 0, y: 0) {
         didSet {
             setNeedsDisplay()
         }
     }
-    @IBInspectable
+
     var secondPoint: CGPoint = CGPoint(x: 1, y: 1) {
         didSet {
             setNeedsDisplay()
@@ -42,10 +42,10 @@ class GradientView: BaseView {
 
     override func draw(_ rect: CGRect) {
         let colors = [_firstColor, _secondColor] as CFArray
-        let start = CGPoint(x: rect.origin.x + (rect.width - rect.origin.x) * firstPoint.x / 100,
-                            y: rect.origin.y + (rect.height - rect.origin.y) * firstPoint.y / 100)
-        let end = CGPoint(x: rect.origin.x + (rect.width - rect.origin.x) * secondPoint.x / 100,
-                          y: rect.origin.y + (rect.height - rect.origin.y) * secondPoint.y / 100)
+        let start = CGPoint(x: rect.origin.x + (rect.width - rect.origin.x) * firstPoint.x,
+                            y: rect.origin.y + (rect.height - rect.origin.y) * firstPoint.y)
+        let end = CGPoint(x: rect.origin.x + (rect.width - rect.origin.x) * secondPoint.x,
+                          y: rect.origin.y + (rect.height - rect.origin.y) * secondPoint.y)
         guard let gradient = CGGradient(colorsSpace: nil, colors: colors, locations: nil),
             let context = UIGraphicsGetCurrentContext() else { return }
         context.drawLinearGradient(gradient, start: start, end: end,

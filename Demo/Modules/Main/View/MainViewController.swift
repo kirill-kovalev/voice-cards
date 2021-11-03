@@ -30,10 +30,9 @@ class MainViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        
-        collectionView.collectionViewLayout = layout
+        collectionView.decelerationRate = .init(rawValue: 0.970)
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.layer.masksToBounds = false
     
         output.viewIsReady()
     }
@@ -48,15 +47,23 @@ class MainViewController: UIViewController {
         super.viewDidLayoutSubviews()
         let inset = collectionView.frame.width / 10
         collectionView.contentInset = .init(top: 0, left: inset, bottom: 0, right: inset)
+        
+        updateCollectionLayout()
+    }
+    
+    private func updateCollectionLayout() {
+        let cellSize = collectionView.frame
+            .inset(by: collectionView.adjustedContentInset)
+            .size
+        let layout = MainCollectionViewLayout(pageSize: cellSize, lineSpacing: 0)
+        layout.scrollDirection = .horizontal
+        collectionView.collectionViewLayout = layout
+        collectionView.collectionViewLayout.invalidateLayout()
     }
 }
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        collectionView.frame.inset(by: collectionView.adjustedContentInset).size
-    }
+
 }
 
 extension MainViewController: UICollectionViewDataSource {

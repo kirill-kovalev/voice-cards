@@ -36,9 +36,20 @@ class MainCollectionCell: BaseCollectionViewCell {
         coverTitleLabel.textAlignment = titleLabel.textAlignment
         coverTitleLabel.font = titleLabel.font
         coverTitleLabel.textColor = Theme.black
-//        coverTitleLabel.mask = titleMaskView
         
-        contentView.layer.cornerRadius = 25
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.25
+        layer.shadowRadius = 45
+        
+        gradientView.layer.masksToBounds = true
+        gradientView.layer.cornerRadius = 25
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let rect = contentView.bounds.insetBy(dx: 10, dy: 10)
+        contentView.layer.shadowPath = UIBezierPath(roundedRect: rect, cornerRadius: contentView.layer.cornerRadius).cgPath
     }
     
     func setup(with viewModel: MainCollectionCellViewModel?) {
