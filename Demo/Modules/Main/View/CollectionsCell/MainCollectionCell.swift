@@ -43,19 +43,25 @@ class MainCollectionCell: BaseCollectionViewCell {
     @IBOutlet private weak var coverTitleLabel: UILabel!
 
     private let titleMaskView = UIView()
-    
     private(set) var viewModel: MainCollectionCellViewModel?
+    
+    var progress: Double = 0 {
+        didSet { updateMask() }
+    }
 
     override func initSetup() {
         super.initSetup()
         
         titleLabel.font = Resources.Fonts.heading
-        titleLabel.textColor = Resources.Colors.black.withAlphaComponent(0.7)
+        titleLabel.textColor = Resources.Colors.black
         titleLabel.textAlignment = .center
         
         coverTitleLabel.textAlignment = titleLabel.textAlignment
         coverTitleLabel.font = titleLabel.font
-        coverTitleLabel.textColor = Resources.Colors.black
+        coverTitleLabel.textColor = Resources.Colors.white
+        coverTitleLabel.mask = titleMaskView
+        
+        titleMaskView.backgroundColor = .black
         
         layer.masksToBounds = false
         layer.shadowColor = UIColor.black.cgColor
@@ -66,10 +72,16 @@ class MainCollectionCell: BaseCollectionViewCell {
         gradientView.layer.cornerRadius = 25
     }
     
+    private func updateMask() {
+        titleMaskView.frame = coverTitleLabel.bounds
+        titleMaskView.frame.size.width = coverTitleLabel.bounds.width * CGFloat(progress)
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         let rect = contentView.bounds.insetBy(dx: 10, dy: 10)
         contentView.layer.shadowPath = UIBezierPath(roundedRect: rect, cornerRadius: contentView.layer.cornerRadius).cgPath
+        updateMask()
     }
     
     func setup(with viewModel: MainCollectionCellViewModel?) {
