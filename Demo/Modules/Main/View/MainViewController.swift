@@ -35,25 +35,23 @@ class MainViewController: UIViewController {
         collectionView.decelerationRate = .init(rawValue: 0.970)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.layer.masksToBounds = false
+        
+        updateCollectionLayout()
     
         output.viewIsReady()
     }
     
     func setupTheme() {
-        headingLabel.font = Fonts.heading
-        headingLabel.textColor = Theme.black
-        view.backgroundColor = Theme.white
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        let inset = collectionView.frame.width / 10
-        collectionView.contentInset = .init(top: 0, left: inset, bottom: 0, right: inset)
-        
-        updateCollectionLayout()
+        headingLabel.font = Resources.Fonts.heading
+        headingLabel.textColor = Resources.Colors.black
+        view.backgroundColor = Resources.Colors.white
     }
     
     private func updateCollectionLayout() {
+        view.layoutIfNeeded()
+        collectionView.reloadData()
+        let inset = collectionView.frame.width / 10
+        collectionView.contentInset = .init(top: 0, left: inset, bottom: 0, right: inset)
         let cellSize = collectionView.frame
             .inset(by: collectionView.adjustedContentInset)
             .size

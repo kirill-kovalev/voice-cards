@@ -9,7 +9,31 @@
 import UIKit
 
 struct MainCollectionCellViewModel {
-    let text: String
+    let title: String
+    let color: Color
+    let file: URL
+
+    enum Color: CaseIterable {
+        case green, blue, orange, purple
+        
+        var firstColor: UIColor {
+            switch self {
+            case .green: return Resources.Colors.green1
+            case .blue: return Resources.Colors.blue1
+            case .orange: return Resources.Colors.orange1
+            case .purple: return Resources.Colors.purple1
+            }
+        }
+        
+        var secondColor: UIColor {
+            switch self {
+            case .green: return Resources.Colors.green2
+            case .blue: return Resources.Colors.blue2
+            case .orange: return Resources.Colors.orange2
+            case .purple: return Resources.Colors.purple2
+            }
+        }
+    }
 }
 
 class MainCollectionCell: BaseCollectionViewCell {
@@ -24,18 +48,14 @@ class MainCollectionCell: BaseCollectionViewCell {
 
     override func initSetup() {
         super.initSetup()
-        let color = Color.allCases.randomElement()!
         
-        gradientView.firstColor = color.firstColor
-        gradientView.secondColor = color.secondColor
-        
-        titleLabel.font = Fonts.heading
-        titleLabel.textColor = Theme.black.withAlphaComponent(0.7)
+        titleLabel.font = Resources.Fonts.heading
+        titleLabel.textColor = Resources.Colors.black.withAlphaComponent(0.7)
         titleLabel.textAlignment = .center
         
         coverTitleLabel.textAlignment = titleLabel.textAlignment
         coverTitleLabel.font = titleLabel.font
-        coverTitleLabel.textColor = Theme.black
+        coverTitleLabel.textColor = Resources.Colors.black
         
         layer.masksToBounds = false
         layer.shadowColor = UIColor.black.cgColor
@@ -54,31 +74,10 @@ class MainCollectionCell: BaseCollectionViewCell {
     
     func setup(with viewModel: MainCollectionCellViewModel?) {
         self.viewModel = viewModel
-        titleLabel.text = viewModel?.text
-        coverTitleLabel.text = viewModel?.text
-    }
-}
-
-extension MainCollectionCell {
-    enum Color: CaseIterable {
-        case green, blue, orange, purple
+        titleLabel.text = viewModel?.title
+        coverTitleLabel.text = viewModel?.title
         
-        var firstColor: UIColor {
-            switch self {
-            case .green: return Theme.green1
-            case .blue: return Theme.blue1
-            case .orange: return Theme.orange1
-            case .purple: return Theme.purple1
-            }
-        }
-        
-        var secondColor: UIColor {
-            switch self {
-            case .green: return Theme.green2
-            case .blue: return Theme.blue2
-            case .orange: return Theme.orange2
-            case .purple: return Theme.purple2
-            }
-        }
+        gradientView.firstColor = viewModel?.color.firstColor ?? Resources.Colors.white
+        gradientView.secondColor = viewModel?.color.secondColor ?? Resources.Colors.white
     }
 }

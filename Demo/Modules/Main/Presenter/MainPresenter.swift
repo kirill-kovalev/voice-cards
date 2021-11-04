@@ -22,6 +22,16 @@ protocol MainViewOutput {
 class MainPresenter {
     weak var view: MainViewInput?
     
+    private let models: [MainCollectionCellViewModel] = [
+        .init(title: "Voice example 1", color: .blue, file: Resources.Files.voiceExample1),
+        .init(title: "Voice example 2", color: .green, file: Resources.Files.voiceExample2),
+        .init(title: "Voice example 3", color: .blue, file: Resources.Files.voiceExample3),
+        .init(title: "Voice example 4", color: .orange, file: Resources.Files.voiceExample4),
+        .init(title: "Voice example 5", color: .purple, file: Resources.Files.voiceExample5),
+        .init(title: "Voice example 6", color: .green, file: Resources.Files.voiceExample6),
+        .init(title: "Voice example 7", color: .orange, file: Resources.Files.voiceExample7),
+    ]
+    
     init() {
         
     }
@@ -32,12 +42,10 @@ extension MainPresenter: MainViewOutput {
         
     }
     
-    func numberOfCells() -> Int {
-        10
-    }
+    func numberOfCells() -> Int { models.count }
     
     func viewModel(for index: Int) -> MainCollectionCellViewModel? {
-        .init(text: "Some random text lmao")
+        models.at(index)
     }
     
     func didChangePage() {
