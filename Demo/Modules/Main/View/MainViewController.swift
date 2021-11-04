@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MainViewInput: AnyObject {
-    
+    func setProgress(progress: Double, at index: Int)
 }
 
 class MainViewController: UIViewController {
@@ -71,7 +71,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDelegate
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        guard scrollView.isDragging else { return }
+        guard !scrollView.isDragging else { return }
         output.didEndSwitchingToPage(at: collectionView.page)
     }
     
@@ -89,10 +89,15 @@ extension MainViewController: UICollectionViewDataSource {
         let cell: MainCollectionCell? = collectionView.dequeueReusableCell(for: index)
         let viewModel = output.viewModel(for: index.item)
         cell?.setup(with: viewModel)
+        cell?.progress = 0
         return cell ?? .init()
     }
 }
 
 extension MainViewController: MainViewInput {
-    
+    func setProgress(progress: Double, at index: Int) {
+        let indexPath = IndexPath(item: index, section: 0)
+        let cell = collectionView.cellForItem(at: indexPath) as? MainCollectionCell
+        cell?.progress = progress
+    }
 }

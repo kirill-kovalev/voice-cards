@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol MainViewOutput {
     func viewIsReady()
@@ -32,14 +33,37 @@ class MainPresenter {
         .init(title: "Voice example 7", color: .orange, file: Resources.Files.voiceExample7),
     ]
     
-    init() {
-        
+    private var currentIndex = 0
+    private var player: AVAudioPlayer?
+    
+    private lazy var displayLink = CADisplayLink(target: self, selector: #selector(displayUpdate))
+    
+    private func setupPlayer(for url: URL) {
+        player = nil
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
+            let player = try AVAudioPlayer(contentsOf: url)
+            player.currentTime = 0
+            player.prepareToPlay()
+            self.player = player
+        } catch {
+            print(error)
+        }
+    }
+    
+    @objc private func displayUpdate() {
+        guard let player = player else { return }
+        let progress = player.currentTime / player.duration
+        self.view?.setProgress(progress: progress, at: self.currentIndex)
     }
 }
 
 extension MainPresenter: MainViewOutput {
     func viewIsReady() {
-        
+        if let url = models.at(currentIndex)?.file {
+            setupPlayer(for: url)
+        }
+        displayLink.add(to: .current, forMode: .common)
     }
     
     func numberOfCells() -> Int { models.count }
@@ -53,10 +77,22 @@ extension MainPresenter: MainViewOutput {
     }
     
     func didEndSwitchingToPage(at index: Int) {
-        
+        guard
+            let url = models.at(index)?.file,
+            currentIndex != index
+        else { return }
+        currentIndex = index
+        player?.stop()
+        setupPlayer(for: url)
+        player?.play()
     }
     
     func didTapCell(at index: Int) {
-        
+        guard currentIndex == index else { return }
+        if player?.isPlaying == true {
+            player?.stop()
+        } else {
+            player?.play()
+        }
     }
 }
