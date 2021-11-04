@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60490CB12733FDDF00F7CB83 /* voice_example_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 60490CAA2733FDDE00F7CB83 /* voice_example_1.mp3 */; };
+		60490CB22733FDDF00F7CB83 /* voice_example_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 60490CAB2733FDDE00F7CB83 /* voice_example_2.mp3 */; };
+		60490CB32733FDDF00F7CB83 /* voice_example_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 60490CAC2733FDDE00F7CB83 /* voice_example_7.mp3 */; };
+		60490CB42733FDDF00F7CB83 /* voice_example_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 60490CAD2733FDDF00F7CB83 /* voice_example_6.mp3 */; };
+		60490CB52733FDDF00F7CB83 /* voice_example_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 60490CAE2733FDDF00F7CB83 /* voice_example_3.mp3 */; };
+		60490CB62733FDDF00F7CB83 /* voice_example_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 60490CAF2733FDDF00F7CB83 /* voice_example_5.mp3 */; };
+		60490CB72733FDDF00F7CB83 /* voice_example_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 60490CB02733FDDF00F7CB83 /* voice_example_4.mp3 */; };
+		60490CBB2733FE1600F7CB83 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60490CBA2733FE1600F7CB83 /* Resources.swift */; };
 		60757C6F273312FC006066D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60757C6E273312FC006066D5 /* Assets.xcassets */; };
 		60757C72273312FC006066D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60757C70273312FC006066D5 /* LaunchScreen.storyboard */; };
 		60757C9127331457006066D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60757C8B27331457006066D5 /* Main.storyboard */; };
@@ -19,9 +27,7 @@
 		60757CBE27331632006066D5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CB927331632006066D5 /* BaseView.swift */; };
 		60757CC32733168B006066D5 /* UIVIewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CC22733168B006066D5 /* UIVIewController + Extensions.swift */; };
 		60757CD027331813006066D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757C65273312FA006066D5 /* AppDelegate.swift */; };
-		60757CD527331978006066D5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CD427331978006066D5 /* Theme.swift */; };
 		60757CD927331BF4006066D5 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CD827331BF4006066D5 /* BaseCollectionViewCell.swift */; };
-		60757CE027331DF8006066D5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CDF27331DF8006066D5 /* Fonts.swift */; };
 		60757CEA27332071006066D5 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60757CE927332071006066D5 /* String + Extensions.swift */; };
 		60757CEE27332223006066D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60757CF027332223006066D5 /* Localizable.strings */; };
 		60757CF6273323AD006066D5 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60757CE427331E46006066D5 /* SFProDisplay-Regular.ttf */; };
@@ -46,6 +52,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		60490CAA2733FDDE00F7CB83 /* voice_example_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = voice_example_1.mp3; sourceTree = "<group>"; };
+		60490CAB2733FDDE00F7CB83 /* voice_example_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = voice_example_2.mp3; sourceTree = "<group>"; };
+		60490CAC2733FDDE00F7CB83 /* voice_example_7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = voice_example_7.mp3; sourceTree = "<group>"; };
+		60490CAD2733FDDF00F7CB83 /* voice_example_6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = voice_example_6.mp3; sourceTree = "<group>"; };
+		60490CAE2733FDDF00F7CB83 /* voice_example_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = voice_example_3.mp3; sourceTree = "<group>"; };
+		60490CAF2733FDDF00F7CB83 /* voice_example_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = voice_example_5.mp3; sourceTree = "<group>"; };
+		60490CB02733FDDF00F7CB83 /* voice_example_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = voice_example_4.mp3; sourceTree = "<group>"; };
+		60490CBA2733FE1600F7CB83 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		60757C62273312FA006066D5 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60757C65273312FA006066D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60757C6E273312FC006066D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,9 +74,7 @@
 		60757CA0273314FB006066D5 /* Array + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + Extensions.swift"; sourceTree = "<group>"; };
 		60757CB927331632006066D5 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		60757CC22733168B006066D5 /* UIVIewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController + Extensions.swift"; sourceTree = "<group>"; };
-		60757CD427331978006066D5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		60757CD827331BF4006066D5 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
-		60757CDF27331DF8006066D5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		60757CE327331E46006066D5 /* TTCommons-DemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-DemiBold.ttf"; sourceTree = "<group>"; };
 		60757CE427331E46006066D5 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		60757CE927332071006066D5 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
@@ -85,6 +97,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60490CA92733FDAD00F7CB83 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				60490CAA2733FDDE00F7CB83 /* voice_example_1.mp3 */,
+				60490CAB2733FDDE00F7CB83 /* voice_example_2.mp3 */,
+				60490CAE2733FDDF00F7CB83 /* voice_example_3.mp3 */,
+				60490CB02733FDDF00F7CB83 /* voice_example_4.mp3 */,
+				60490CAF2733FDDF00F7CB83 /* voice_example_5.mp3 */,
+				60490CAD2733FDDF00F7CB83 /* voice_example_6.mp3 */,
+				60490CAC2733FDDE00F7CB83 /* voice_example_7.mp3 */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		60757C59273312FA006066D5 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +152,8 @@
 		60757C7C27331330006066D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60490CBA2733FE1600F7CB83 /* Resources.swift */,
+				60490CA92733FDAD00F7CB83 /* Files */,
 				60757CE227331E2C006066D5 /* Fonts */,
 				60757C6E273312FC006066D5 /* Assets.xcassets */,
 				60757CF027332223006066D5 /* Localizable.strings */,
@@ -237,18 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				60757D0027332606006066D5 /* Views */,
-				60757CD32733196A006066D5 /* Theme */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		60757CD32733196A006066D5 /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				60757CD427331978006066D5 /* Theme.swift */,
-				60757CDF27331DF8006066D5 /* Fonts.swift */,
-			);
-			path = Theme;
 			sourceTree = "<group>";
 		};
 		60757CE227331E2C006066D5 /* Fonts */ = {
@@ -339,10 +357,17 @@
 			files = (
 				60757C9127331457006066D5 /* Main.storyboard in Resources */,
 				60757CEE27332223006066D5 /* Localizable.strings in Resources */,
+				60490CB12733FDDF00F7CB83 /* voice_example_1.mp3 in Resources */,
 				60757C72273312FC006066D5 /* LaunchScreen.storyboard in Resources */,
+				60490CB52733FDDF00F7CB83 /* voice_example_3.mp3 in Resources */,
+				60490CB72733FDDF00F7CB83 /* voice_example_4.mp3 in Resources */,
+				60490CB32733FDDF00F7CB83 /* voice_example_7.mp3 in Resources */,
+				60490CB62733FDDF00F7CB83 /* voice_example_5.mp3 in Resources */,
 				60757CFC27332459006066D5 /* MainCollectionCell.xib in Resources */,
 				60757CF7273323AD006066D5 /* TTCommons-DemiBold.ttf in Resources */,
 				60757CF6273323AD006066D5 /* SFProDisplay-Regular.ttf in Resources */,
+				60490CB22733FDDF00F7CB83 /* voice_example_2.mp3 in Resources */,
+				60490CB42733FDDF00F7CB83 /* voice_example_6.mp3 in Resources */,
 				60757C6F273312FC006066D5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,16 +423,15 @@
 				60757C9227331457006066D5 /* MainViewController.swift in Sources */,
 				60757D0B2733428B006066D5 /* UIScrollView + Extensions.swift in Sources */,
 				60757C9327331457006066D5 /* MainModule.swift in Sources */,
-				60757CE027331DF8006066D5 /* Fonts.swift in Sources */,
 				60757CEA27332071006066D5 /* String + Extensions.swift in Sources */,
 				60757CFD27332459006066D5 /* MainCollectionCell.swift in Sources */,
 				60757CD927331BF4006066D5 /* BaseCollectionViewCell.swift in Sources */,
 				60757D0227332613006066D5 /* GradintView.swift in Sources */,
-				60757CD527331978006066D5 /* Theme.swift in Sources */,
 				60757D0527333156006066D5 /* MainCollectionViewLayout.swift in Sources */,
 				60757CA1273314FB006066D5 /* Array + Extensions.swift in Sources */,
 				60757CC32733168B006066D5 /* UIVIewController + Extensions.swift in Sources */,
 				60757C9E273314D2006066D5 /* Bundle + Extensions.swift in Sources */,
+				60490CBB2733FE1600F7CB83 /* Resources.swift in Sources */,
 				60757CD027331813006066D5 /* AppDelegate.swift in Sources */,
 				60757CBE27331632006066D5 /* BaseView.swift in Sources */,
 			);
